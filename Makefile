@@ -6,9 +6,10 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 run: clean-containers build
-	docker run --rm -it $(IMAGE) ruby --version
-	docker run --rm -it $(IMAGE) gem --version
-	docker run --rm -it $(IMAGE) bundle --version
+	docker run --rm $(IMAGE) ruby --version
+	docker run --rm $(IMAGE) irb --version
+	docker run --rm $(IMAGE) gem --version
+	docker run --rm $(IMAGE) bundle --version
 
 clean-containers:
 	-docker ps -a | grep -v IMAGE | awk '{ print $$1 }' | xargs docker rm -f
