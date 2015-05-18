@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-ruby
+IMAGE=mcandre/docker-ruby:2.0
 
 all: run
 
