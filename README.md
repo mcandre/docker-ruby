@@ -8,14 +8,14 @@ https://registry.hub.docker.com/u/mcandre/docker-ruby/
 
 ```
 $ make
-docker run --rm mcandre/docker-ruby:2.0 ruby --version
-ruby 2.0.0p643 (2015-02-25 revision 49749) [x86_64-linux]
-docker run --rm mcandre/docker-ruby:2.0 irb --version
+docker run --rm mcandre/docker-ruby:2.1 ruby --version
+ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux]
+docker run --rm mcandre/docker-ruby:2.1 irb --version
 irb 0.9.6(09/06/30)
-docker run --rm mcandre/docker-ruby:2.0 gem --version
-2.4.6
-docker run --rm mcandre/docker-ruby:2.0 bundle --version
-Bundler version 1.9.8
+docker run --rm mcandre/docker-ruby:2.1 gem --version
+2.4.3
+docker run --rm mcandre/docker-ruby:2.1 bundle --version
+Bundler version 1.9.9
 ```
 
 # REQUIREMENTS
