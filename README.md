@@ -8,13 +8,13 @@ https://registry.hub.docker.com/u/mcandre/docker-ruby/
 
 ```
 $ make
-docker run --rm mcandre/docker-ruby:1.9 ruby --version
-ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-linux]
-docker run --rm mcandre/docker-ruby:1.9 irb --version
-irb 0.9.6(09/06/30)
-docker run --rm mcandre/docker-ruby:1.9 gem --version
-2.4.3
-docker run --rm mcandre/docker-ruby:1.9 bundle --version
+docker run --rm mcandre/docker-ruby:1.8 ruby --version
+ruby 1.8.7 (2013-06-27 patchlevel 374) [x86_64-linux]
+docker run --rm mcandre/docker-ruby:1.8 irb --version
+irb 0.9.5(05/04/13)
+docker run --rm mcandre/docker-ruby:1.8 gem --version
+2.0.16
+docker run --rm mcandre/docker-ruby:1.8 bundle --version
 Bundler version 1.9.9
 ```
 
