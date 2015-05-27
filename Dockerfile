@@ -1,12 +1,6 @@
-FROM ubuntu:12.04
+FROM mcandre/docker-rvm
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
-
-RUN apt-get update
-RUN apt-get install -y curl
-RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-RUN curl -sSL https://get.rvm.io | bash -s stable --ruby
-ENV PATH /usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-RUN rvm install 2.2
-RUN rvm use 2.2
-ENV PATH /usr/local/rvm/rubies/ruby-2.2.1/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-RUN gem install bundler
+ENV PATH /usr/local/rvm/rubies/ruby-2.2.1/bin:$PATH
+RUN rvm install 2.2 && \
+    rvm use 2.2 && \
+    gem install bundler
